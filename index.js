@@ -1,25 +1,113 @@
 
-let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-let alphabet_reversed = "";
 
-let alphabet_arr = [
-    {
-        idx: 1,
-        leter: "A"
-    }
-]
+
+let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let vowels = [];
+let consonants = [];
+
+
+function isVowel(char) {
+  return /[aeiou]/i.test(char);
+}
+
 
 for (let i = 0; i < alphabet.length; i++) {
-    alphabet_arr.push({
-        idx: i + 1,
-        leter: alphabet[i]
-    });
+  let char = alphabet[i];
+  if (isVowel(char)) {
+    vowels.push(char);
+  } else {
+    consonants.push(char);
+  }
 }
 
-for (let i = alphabet.length - 1; i >= 0; i--) {
-    alphabet_reversed += alphabet[i];
+console.log("Гласные:", vowels);
+console.log("Согласные:", consonants);
+
+
+let arr = [ {  
+    id: Math.random(),
+     name: 'Timur',
+     info: { school: '235',
+     faculity: 'SMM' }, },
+    { 
+        id: Math.random(),
+    name: 'Imran',
+     info: { school: 'ne izvestno',
+     faculity: 'programming' }, },
+     {
+         id: Math.random(),
+         name: 'Aminjon',
+      info: { school: '444',
+      faculity: 'Dizayn' }, }, 
+     { 
+        id: Math.random(),
+         name: 'Maxmud',
+      info: { school: '777',
+      faculity: '3dsmax' }, },
+      { 
+        id: Math.random(),
+         name: 'Muxammad',
+       info: { school: '5555',
+       faculity: 'Backend' }, }
+     , {
+         id: Math.random(),
+         name: 'Timur',
+      info: { school: '235',
+      faculity: 'SMM' }, },
+      { 
+        id: Math.random(),
+         name: 'Imran',
+       info: { school: 'ne izvestno',
+       faculity: 'programming' }, }, 
+      { 
+        id: Math.random(),
+         name: 'Aminjon',
+       info: { school: '444',
+       faculity: 'Dizayn' }, },
+       {
+         id: Math.random(),
+         name: 'Maxmud',
+        info: { school: '777',
+        faculity: '3dsmax' },
+ }, 
+ {
+    id: Math.random(),
+    name: 'Maxmud',
+    info: {
+        school: '777',
+        faculity: '3dsmax'
+    },
+},
+{
+    id: Math.random(),
+    name: 'Muxammad',
+    info: {
+        school: '5555',
+        faculity: 'Backend'
+    }
+}]
+
+ let categories = [ 
+    {
+         course: ' SMM', 
+         count: 0 },
+  {
+     course: 'PROGRAMMING',
+   count: 0 
+}, 
+  { course: ' 3DSMAX',
+   count: 0 
+}, 
+  { course: ' DIZAYN',
+   count: 0 
+}, 
+  { course: ' BACKEND',
+   count: 0 
+}, ]
+
+for(let item of arr) {
+    let pg = item.faculity
+    if(item.faculity === item.course) {
+        
+    }
 }
-
-console.log(alphabet_arr);
-console.log(alphabet_reversed);
-
