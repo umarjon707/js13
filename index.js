@@ -20,8 +20,8 @@ for (let i = 0; i < alphabet.length; i++) {
   }
 }
 
-console.log("Гласные:", vowels);
-console.log("Согласные:", consonants);
+console.log("Vowels:", vowels);
+console.log("Constonants:", consonants);
 
 
 let arr = [ {  
@@ -105,9 +105,20 @@ let arr = [ {
    count: 0 
 }, ]
 
-for(let item of arr) {
-    let pg = item.faculity
-    if(item.faculity === item.course) {
-        
+
+
+    for (const student of arr) {
+      const faculty = student.info.faculity.toUpperCase();
+      for (let category of categories) {
+        if (category.course.trim().toUpperCase() === faculty) {
+          category.count++;
+          
+        }
+      
     }
-}
+    }
+  console.log(categories);
+  
+
+
+  
